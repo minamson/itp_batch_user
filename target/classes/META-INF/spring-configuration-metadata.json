@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.from-db",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.rfiot.itp.fromDB.config.FromEntityManagerFactoryConfiguration",
+      "sourceMethod": "getFromDataSource()"
+    },
+    {
+      "name": "spring.to-db",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.rfiot.itp.toDB.config.ToEntityManagerFactoryConfiguration",
+      "sourceMethod": "getToDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

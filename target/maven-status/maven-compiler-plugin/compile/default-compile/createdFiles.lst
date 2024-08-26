@@ -1,0 +1,14 @@
+com\rfiot\itp\fromDB\entity\FromUser.class
+com\rfiot\itp\fromDB\entity\FromDept.class
+com\rfiot\itp\service\IUserService.class
+com\rfiot\itp\fromDB\config\FromEntityManagerFactoryConfiguration.class
+com\rfiot\itp\fromDB\repository\IFromUserRepository.class
+com\rfiot\itp\toDB\config\ToEntityManagerFactoryConfiguration.class
+com\rfiot\itp\service\UserService.class
+com\rfiot\itp\toDB\repository\IToDeptRepository.class
+com\rfiot\itp\ItpApplication.class
+com\rfiot\itp\toDB\repository\IToUserRepository.class
+META-INF\spring-configuration-metadata.json
+com\rfiot\itp\toDB\entity\ToDept.class
+com\rfiot\itp\toDB\entity\ToUser.class
+com\rfiot\itp\schedulejob\SchedulerUserJob.class
