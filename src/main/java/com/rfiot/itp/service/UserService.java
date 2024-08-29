@@ -51,16 +51,16 @@ public class UserService implements IUserService {
     @Transactional
     public void processUser(FromUser fromUser) {
 
-        List<Optional<ToUser>> users = toUserRepository.findByUserId(fromUser.getEmpCode().trim());
+        List<ToUser> users = toUserRepository.findByUserId(fromUser.getEmpCode().trim());
         if (!users.isEmpty()) {
             //System.out.println(" skip user.isPresent() "+ fromUser.getEmpCode().trim());
             return;
         }
 
-        List<Optional<ToDept>> toDepts = toDeptRepository.findByOrgDeptCode(fromUser.getUserDepartmentCode());
+        List<ToDept> toDepts = toDeptRepository.findByOrgDeptCode(fromUser.getUserDepartmentCode());
         String dept_code = "";
         if(!toDepts.isEmpty()) {
-            dept_code = toDepts.get(0).get().getOrgDeptCode();
+            dept_code = toDepts.get(0).getDepartmentCode();
             //System.out.println("toDepts count = "+toDepts.stream().count());
         }
 
@@ -90,7 +90,7 @@ public class UserService implements IUserService {
             toUserRepository.save(toUser);
         }
         catch (Exception e) {
-            e.printStackTrace();
+            throw e;
         }
     }
 

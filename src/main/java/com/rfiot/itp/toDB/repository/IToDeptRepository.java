@@ -10,6 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface IToDeptRepository extends JpaRepository<ToDept,Long> {
-    List<Optional<ToDept>> findByOrgDeptCode(String fromDeptCode);
+    List<ToDept> findByOrgDeptCode(String fromDeptCode);
 
 }

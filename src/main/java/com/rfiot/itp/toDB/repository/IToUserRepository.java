@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface IToUserRepository extends JpaRepository<ToUser, Long> {
-    List<Optional<ToUser>> findByUserId(String userID);
+    List<ToUser> findByUserId(String userID);
 }
